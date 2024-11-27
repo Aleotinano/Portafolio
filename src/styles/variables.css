@@ -1,0 +1,44 @@
+:root {
+  --background-body: #111;
+  --background-componentes: #181818;
+  --background-letters: #fff;
+  --background-icons: #c5c5c5;
+  --icons-size: 30px;
+  --icons-size-small: 24px;
+  --width-for-container: 583px;
+  --width-for-container-medium: 438px;
+  --width-for-container-small: 341px;
+  --font-size-big: 1.4rem;
+  --font-size-medium: 1.2rem;
+  --font-size-small: 1rem;
+  --font-size-more-small: 0.7rem;
+  --space-long: 1em;
+  --space-short: 0.5em;
+}
+
+.darktheme {
+  --background-body: #111;
+  --background-componentes: #181818;
+  --background-letters: #fff;
+  --background-icons: #c5c5c5;
+}
+
+.lighttheme {
+  --background-body: #ebebeb;
+  --background-componentes: #ffffff;
+  --background-letters: #333333;
+  --background-icons: #555555;
+}
+
+.icon {
+  height: var(--icons-size);
+  width: var(--icons-size);
+  fill: var(--background-icons);
+}
+
+@media (max-width: 740px) {
+  .icon {
+    height: var(--icons-size-small);
+    width: var(--icons-size-small);
+  }
+}

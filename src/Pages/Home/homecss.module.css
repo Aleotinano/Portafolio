@@ -1,0 +1,119 @@
+.HomeContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 1rem 0 18rem;
+  font-family: monospace;
+  width: auto;
+  gap: 1rem;
+}
+
+.HomeTitles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--background-letters);
+  font-size: var(--font-size-big);
+  width: 100%;
+  max-width: var(--width-for-container);
+}
+
+.Avatar {
+  height: 200px;
+  width: 200px;
+  border-radius: 120px;
+}
+
+.AvatarContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.HabilitiesAboutMeContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+@media (max-width: 1120px) {
+  .HomeTitles {
+    font-size: var(--font-size-medium);
+    gap: 0.8rem;
+    max-width: var(--width-for-container-medium);
+  }
+
+  .Avatar {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+@media (max-width: 970px) {
+  .HomeContainer {
+    max-width: var(256px);
+  }
+
+  .HabilitiesAboutMeContainer {
+    flex-direction: column;
+  }
+
+  .AvatarContainer {
+    gap: 0;
+    margin-bottom: 1rem;
+  }
+
+  .HabilitiesAboutMeContainer {
+    gap: 0rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .HomeContainer {
+    margin: 40px 0rem 0 5rem;
+
+    max-width: auto;
+  }
+
+  .Avatar {
+    width: 130px;
+    height: 130px;
+  }
+
+  .HomeTitles {
+    font-size: var(--font-size-small);
+  }
+}
+
+@media (max-width: 460px) {
+  .HomeContainer {
+    margin-left: 4rem;
+  }
+
+  .HomeTitles {
+    font-size: var(--font-size-more-small);
+  }
+
+  .AvatarContainer {
+    gap: 0;
+  }
+
+  .Avatar {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 330px) {
+  .HomeTitles {
+    font-size: var(--space-short);
+  }
+  .AvatarContainer {
+    gap: 1rem;
+    flex-wrap: wrap-reverse;
+  }
+}

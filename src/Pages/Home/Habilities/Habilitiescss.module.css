@@ -1,0 +1,91 @@
+.HablitiesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--font-size-small) 0;
+  gap: 3rem;
+}
+
+.Hablities {
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: var(--font-size-more-small);
+  font-size: var(--font-size-medium);
+  color: var(--background-letters);
+}
+
+.Hablities h3 {
+  height: 57.8px;
+  text-wrap: nowrap;
+  padding-bottom: var(--font-size-small);
+  border-bottom: 2px solid var(--background-letters);
+}
+
+.Hablities span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Icon {
+  font-size: var(--icons-size);
+  color: var(--background-icons);
+}
+
+.Icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--font-size-big);
+  width: 100%;
+  max-width: 200px;
+}
+
+.HablitiesContainer .Hablities:nth-child(3) .Icons {
+  width: 100%;
+  max-width: 200px;
+}
+
+@media (max-width: 1220px) {
+  .Hablities {
+    font-size: var(--font-size-small);
+  }
+
+  .Hablities h3 {
+    height: 49.39px;
+  }
+}
+
+@media (max-width: 970px) {
+  .Hablities h3 {
+    height: auto;
+    padding-bottom: 0.5em;
+  }
+}
+
+@media (max-width: 740px) {
+  .HablitiesContainer {
+    gap: 1rem;
+  }
+
+  .Hablities h3 {
+    font-size: var(--font-size-small);
+  }
+
+  .Hablities h3 {
+    height: auto;
+  }
+
+  .Icons {
+    width: 100%;
+    gap: var(--space-short);
+  }
+
+  .Icon {
+    font-size: var(--icons-size-small);
+  }
+}
