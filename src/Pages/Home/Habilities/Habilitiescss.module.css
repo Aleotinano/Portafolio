@@ -1,0 +1,209 @@
+/*/////////// General Styles ///////////*/
+
+.HablitiesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: var(--font-size-small) 0 0;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.Hablities,
+.AboutMeContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: var(--font-size-big);
+  font-size: var(--font-size-big);
+  color: var(--background-letters);
+  background-color: var(--background-componentes);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*/////////// Cards Style ///////////*/
+
+.CardsContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+}
+
+.Hablities {
+  max-width: 320px;
+}
+
+.Icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--font-size-big);
+  font-size: var(--font-size-big);
+  justify-content: center;
+}
+
+.SpanContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.SpanContent a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  text-decoration: none;
+  color: var(--background-letters);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  border: 1px solid var(--background-body);
+}
+
+.SpanContent a:hover {
+  transform: scale(1.05);
+  background-color: var(--background-body);
+}
+
+.Contactos {
+  display: flex;
+  gap: 1rem;
+}
+
+/*/////////// Titles Style ///////////*/
+
+.Titleh3 {
+  text-wrap: nowrap;
+  padding-bottom: var(--font-size-small);
+  border-bottom: 2px solid var(--background-letters);
+  font-weight: bold;
+  text-align: center;
+}
+
+.Titleh4 {
+  border-bottom: 1px solid var(--background-letters);
+  text-align: center;
+  font-weight: 400;
+}
+
+/*/////////// About Me Style ///////////*/
+
+.AboutMeContainer {
+  max-width: var(--width-for-container);
+  width: 100%;
+}
+
+.AboutMeContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.Lenguajes {
+  margin-left: 2rem;
+  width: fit-content;
+}
+
+.Lenguajes li:nth-child(1) {
+  color: var(--html-font-color);
+}
+.Lenguajes li:nth-child(2) {
+  color: var(--css-font-color);
+}
+.Lenguajes li:nth-child(3) {
+  color: var(--js-font-color);
+}
+.Lenguajes li:nth-child(4) {
+  color: var(--react-font-color);
+}
+
+@media (max-width: 1240px) {
+  .Hablities {
+    max-width: var(--width-for-container);
+  }
+}
+
+@media (max-width: 1100px) {
+  .HablitiesContainer {
+    gap: 1rem;
+  }
+
+  .Titleh3 {
+    border-bottom: 1px solid var(--background-letters);
+  }
+
+  .Hablities,
+  .AboutMeContainer {
+    font-size: var(--font-size-medium);
+    gap: var(--font-size-more-small-max);
+  }
+}
+
+@media (max-width: 750px) {
+  .AboutMeContent,
+  .Hablities {
+    font-size: var(--font-size-small);
+  }
+
+  .HablitiesContainer {
+    gap: 0.5rem;
+  }
+  .CardsContainer {
+    gap: 1rem;
+  }
+
+  .AboutMeContent {
+    gap: var(--font-size-more-small-max);
+  }
+
+  .AboutMeContent ul:first-of-type {
+    margin-left: 1rem;
+  }
+
+  .Titleh3 {
+    padding-bottom: var(--font-size-more-small-max);
+  }
+
+  .Titleh3,
+  .Titleh4 {
+    font-size: var(--font-size-small);
+  }
+
+  .Icons {
+    gap: var(--space-short);
+  }
+
+  .Icons p {
+    font-size: var(--font-size-small);
+  }
+
+  .Contactos {
+    gap: 0.5em;
+  }
+
+  .Contactos li:nth-child(2) {
+    gap: 0.5em;
+  }
+}
+
+@media (max-width: 430px) {
+  .AboutMeContent {
+    font-size: var(--font-size-more-small);
+  }
+
+  .Titleh3,
+  .Titleh4 {
+    font-size: var(--font-size-more-small);
+  }
+
+  .Icons p {
+    font-size: var(--font-size-more-small);
+  }
+}
