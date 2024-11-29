@@ -1,16 +1,22 @@
 import React from "react";
 
 export const HabilitiesCard = ({
-  Hablities,
+  CardContainer,
   text,
-  Icons,
+  ContentContainer,
   Content,
   TextStyle,
+  keytitle,
+  contentkey,
 }) => {
   return (
-    <div className={Hablities}>
-      <h3 className={TextStyle}>{text}</h3>
-      <div className={Icons}>{Content}</div>
+    <div className={CardContainer}>
+      <h3 className={TextStyle} key={keytitle}>
+        {text}
+      </h3>
+      <div className={ContentContainer} key={contentkey}>
+        {Content}
+      </div>
     </div>
   );
 };

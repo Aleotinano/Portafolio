@@ -11,11 +11,11 @@
   --width-for-container-small: 341px;
   --font-size-big: 1.4rem;
   --font-size-medium: 1.2rem;
-  --font-size-small: 0.9rem;
+  --font-size-small: 1rem;
   --font-size-more-small: 0.7rem;
   --font-size-more-small-max: 0.5rem;
+  --space-xl: 2rem;
   --space-long: 1em;
-  --space-short: 0.5em;
   --html-font-color: #eb5b00;
   --css-font-color: #1f509a;
   --js-font-color: #ffeb55;
@@ -43,6 +43,11 @@
   height: var(--icons-size);
   width: var(--icons-size);
   fill: var(--background-icons);
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  transition: ease 0.1s;
 }
 
 @media (max-width: 740px) {

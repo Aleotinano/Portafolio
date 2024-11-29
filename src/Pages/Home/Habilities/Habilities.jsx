@@ -9,15 +9,14 @@ import {
   FaJs,
   FaGithub,
   FaBootstrap,
+  FaGitAlt,
+  FaNodeJs,
+  FaWhatsapp,
+  FaInstagram,
 } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
-import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { DiPhotoshop } from "react-icons/di";
-import {
-  BiLogoVisualStudio,
-  BiLogoTailwindCss,
-  BiLogoAdobe,
-} from "react-icons/bi";
+import { BiLogoVisualStudio, BiLogoAdobe } from "react-icons/bi";
 import { CgTrello } from "react-icons/cg";
 import { HabilitiesCard } from "../../../Componentes/HabilitiesCard/HabilitiesCard";
 
@@ -25,16 +24,18 @@ export const Habilities = () => {
   return (
     <div className={Hablitiescss.HablitiesContainer}>
       <HabilitiesCard
-        Hablities={Hablitiescss.AboutMeContainer}
+        keytitle={"keytitle1"}
+        contentkey={"contentkey1"}
+        CardContainer={Hablitiescss.AboutMeContainer}
         TextStyle={Hablitiescss.Titleh3}
         text={"< Sobre mi />"}
-        Icons={Hablitiescss.AboutMeContent}
+        ContentContainer={Hablitiescss.AboutMeContent}
         Content={[
           <p key="about-1">¡Hola! Soy Alejandro 👋</p>,
           <p key="about-2">
-            Soy un desarrollador frontend con una gran pasión por crear
-            experiencias web que sean tanto funcionales como atractivas. Trabajo
-            con tecnologias como:
+            🛠️ Desarrollador frontend con experiencia en el diseño y desarrollo
+            de páginas y aplicaciones web, creando interfaces intuitivas,
+            funcionales y modernas. Trabajo con tecnologias como:
           </p>,
           <ul key="about-3" className={Hablitiescss.Lenguajes}>
             <li key="lang-1">HTML</li>
@@ -43,46 +44,64 @@ export const Habilities = () => {
             <li key="lang-4">React</li>
           </ul>,
           <p key="about-4">
-            🌟 Mi objetivo siempre está en mejorar la experiencia del usuario,
-            buscando soluciones creativas para cada desafío. Me mantengo en
-            constante aprendizaje, explorando nuevas herramientas y tecnologías
-            para seguir creciendo como profesional.
+            🌟 Mi objetivo es mejorar la experiencia del usuario mediante
+            soluciones creativas y efectivas para cada desafío. Me comprometo
+            con el aprendizaje continuo, explorando nuevas herramientas y
+            tecnologías para crecer profesionalmente y aportar mayor valor a mis
+            proyectos.
           </p>,
           <p key="about-5">
-            💻 Estoy interesado en aplicar mis conocimientos y habilidades en
-            nuevos proyectos, con el objetivo de contribuir al éxito de equipos
-            de trabajo y seguir aprendiendo y creciendo profesionalmente.
+            💻 Estoy motivado por la oportunidad de aplicar mis conocimientos y
+            habilidades en nuevos proyectos, contribuyendo al éxito de los
+            equipos de trabajo mientras continúo aprendiendo y evolucionando
+            profesionalmente.
           </p>,
-          <ul key="about-6" className={Hablitiescss.SpanContent}>
-            <span>¡Hablemos!</span>
-            <span className={Hablitiescss.Contactos}>
-              <FaInstagram className="icon" key="insta" title="Instagram" />
-              <FaWhatsapp className="icon" key="whatsapp" title="Whatsapp" />
-              <MdOutlineEmail className="icon" key="email" title="Email" />
-            </span>
+          <p key="about-6">
+            👉 Si necesitas ayuda con tu proyecto o quieres crear una página
+            web, no dudes en contactarme. Estoy aquí para colaborar y aportar
+            soluciones.
+          </p>,
+          <ul key="about-7" className={Hablitiescss.Contactos}>
+            <li>
+              <p>¡Hablemos!</p>
+            </li>
+            <li>
+              <a href="https://wa.me/1234567890">
+                <FaWhatsapp className="icon" key="insta" title="Instagram" />
+              </a>
+              <a href="mailto:alejandrootiano2@gmail.com?body=Hola%20Alejandro">
+                <MdOutlineEmail className="icon" key="email" title="Email" />
+              </a>
+            </li>
           </ul>,
         ]}
       />
 
       <div className={Hablitiescss.CardsContainer}>
         <HabilitiesCard
-          Hablities={Hablitiescss.Hablities}
+          keytitle={"keytitle2"}
+          contentkey={"contentkey2"}
+          CardContainer={Hablitiescss.CardContainer}
           TextStyle={Hablitiescss.Titleh3}
           text={"< Herramientas />"}
-          Icons={Hablitiescss.Icons}
+          ContentContainer={Hablitiescss.Icons}
           Content={[
             <BiLogoAdobe className="icon" key="tool-1" />,
             <DiPhotoshop className="icon" key="tool-2" />,
             <CgTrello className="icon" key="tool-3" />,
             <FaGithub className="icon" key="tool-4" />,
             <BiLogoVisualStudio className="icon" key="tool-5" />,
+            <FaGitAlt className="icon" key="tool-6" />,
+            <FaNodeJs className="icon" key="tool-7" />,
           ]}
         />
         <HabilitiesCard
-          Hablities={Hablitiescss.Hablities}
+          keytitle={"keytitle3"}
+          contentkey={"contentkey3"}
+          CardContainer={Hablitiescss.CardContainer}
           TextStyle={Hablitiescss.Titleh3}
           text={"< Tecnologias />"}
-          Icons={Hablitiescss.Icons}
+          ContentContainer={Hablitiescss.Icons}
           Content={[
             <FaReact className="icon" key="tech-1" />,
             <FaHtml5 className="icon" key="tech-2" />,
@@ -93,40 +112,46 @@ export const Habilities = () => {
         />
 
         <HabilitiesCard
-          Hablities={Hablitiescss.Hablities}
+          keytitle={"keytitle4"}
+          contentkey={"contentkey4"}
+          CardContainer={Hablitiescss.CardContainer}
           TextStyle={Hablitiescss.Titleh3}
           text={"< Proyectos />"}
-          Icons={Hablitiescss.Icons}
+          ContentContainer={Hablitiescss.SpanContent}
           Content={[
-            <ul
-              key="projects"
-              className={`${Hablitiescss.SpanContent} ${Hablitiescss.Proyects}`}
+            <Link
+              to="https://github.com/Aleotinano/DaFood-Frontend"
+              key="project-1"
+              className={Hablitiescss.Proyect}
             >
-              <span>
-                <Link
-                  to="https://github.com/Aleotinano/DaFood-Frontend"
-                  key="project-1"
-                >
-                  <p>Da Food</p>
-                  <FaGithub className="icon" key="github-dafood" />
-                </Link>
-              </span>
-
-              <span>
-                <Link
-                  to="https://github.com/Aleotinano/Portfolio"
-                  key="project-2"
-                >
-                  <p>Portafolio</p>
-                  <FaGithub className="icon" key="github-portfolio" />
-                </Link>
-              </span>
-            </ul>,
+              <p key="project-p-1" className={Hablitiescss.textanimated}>
+                Da Food
+              </p>
+              <FaGithub
+                className={`icon ${Hablitiescss.iconanimated} `}
+                key="github-dafood"
+              />
+            </Link>,
+            <Link
+              to="https://github.com/Aleotinano/Portfolio"
+              key="project-2"
+              className={Hablitiescss.Proyect}
+            >
+              <p key="project-p-2" className={Hablitiescss.textanimated}>
+                Portafolio
+              </p>
+              <FaGithub
+                className={`icon ${Hablitiescss.iconanimated} `}
+                key="github-portfolio"
+              />
+            </Link>,
           ]}
         />
 
         <HabilitiesCard
-          Hablities={Hablitiescss.Hablities}
+          keytitle={"keytitle5"}
+          contentkey={"contentkey5"}
+          CardContainer={Hablitiescss.CardContainer}
           TextStyle={Hablitiescss.Titleh3}
           text={"< Formacion />"}
           Icons={Hablitiescss.Icons}
@@ -134,7 +159,7 @@ export const Habilities = () => {
             <h4 key="edu-1" className={Hablitiescss.Titleh4}>
               Autodidacta
             </h4>,
-            <p key="edu-2">
+            <p key="edu-1-p">
               Mis conocimientos como programador los he adquirido de manera
               autodidacta, a través de la práctica constante, el estudio
               independiente y la realización de proyectos personales, lo que me
