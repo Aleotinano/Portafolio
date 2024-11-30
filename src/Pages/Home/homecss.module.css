@@ -1,10 +1,10 @@
 .HomeContainer {
   display: flex;
   flex-direction: column;
-  margin: 40px 1rem 0 18rem;
+  margin: var(--font-size-big) var(--font-size-more-small) 0 16rem;
   font-family: monospace;
   width: auto;
-  gap: 1rem;
+  gap: var(--font-size-small);
 }
 
 .HomeTitles {
@@ -12,11 +12,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 1rem;
+  gap: var(--font-size-small);
   color: var(--background-letters);
   font-size: var(--font-size-big);
   width: 100%;
-  max-width: var(--width-for-container);
+  flex: 1;
 }
 
 .Avatar {
@@ -26,55 +26,41 @@
 }
 
 .AvatarContainer {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 2rem;
-  margin-bottom: 4rem;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
 }
 
 .HabilitiesAboutMeContainer {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 2rem;
+  gap: var(--space-xl);
 }
 
-@media (max-width: 1120px) {
+@media (max-width: 1000px) {
   .HomeTitles {
     font-size: var(--font-size-medium);
-    gap: 0.8rem;
+    gap: var(--font-size-more-small);
     max-width: var(--width-for-container-medium);
   }
 
   .Avatar {
-    width: 170px;
-    height: 170px;
-  }
-}
-
-@media (max-width: 970px) {
-  .HomeContainer {
-    max-width: var(256px);
+    width: 150px;
+    height: 150px;
   }
 
-  .HabilitiesAboutMeContainer {
-    flex-direction: column;
-  }
-
-  .AvatarContainer {
-    gap: 0;
-    margin-bottom: 1rem;
-  }
-
-  .HabilitiesAboutMeContainer {
-    gap: 0rem;
+  .HomeTitles {
+    font-size: var(--font-size-medium);
   }
 }
 
 @media (max-width: 750px) {
   .HomeContainer {
-    margin: 40px 0rem 0 5rem;
+    margin: var(--font-size-big) 0rem var(--font-size-more-small) 5rem;
 
     max-width: auto;
   }
@@ -98,10 +84,6 @@
     font-size: var(--font-size-more-small);
   }
 
-  .AvatarContainer {
-    gap: 0;
-  }
-
   .Avatar {
     width: 70px;
     height: 70px;
@@ -109,11 +91,8 @@
 }
 
 @media (max-width: 330px) {
-  .HomeTitles {
-    font-size: var(--space-short);
-  }
+  .HomeTitles,
   .AvatarContainer {
-    gap: 1rem;
-    flex-wrap: wrap-reverse;
+    font-size: var(--space-short);
   }
 }

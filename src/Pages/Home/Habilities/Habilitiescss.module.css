@@ -1,91 +1,197 @@
+/*/////////// Containers Styles ///////////*/
+
 .HablitiesContainer {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--font-size-small) 0;
-  gap: 3rem;
+  gap: var(--font-size-small);
+  padding: var(--font-size-small) 0 0;
+  margin-bottom: var(--space-xl);
 }
 
-.Hablities {
-  max-width: 300px;
+.CardContainer,
+.AboutMeContainer {
   width: 100%;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: var(--font-size-more-small);
-  font-size: var(--font-size-medium);
+  gap: var(--font-size-small);
+  font-size: var(--font-size-big);
   color: var(--background-letters);
+  background-color: var(--background-componentes);
+  padding: var(--font-size-small);
+  border-radius: var(--font-size-small);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.Hablities h3 {
-  height: 57.8px;
+.CardsContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--font-size-big);
+}
+
+/*/ ////////// Content Styles ///////////*/
+
+.AboutMeContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--font-size-big);
+}
+
+/*/////////// About Me Styles ///////////*/
+
+.Titleh3 {
   text-wrap: nowrap;
   padding-bottom: var(--font-size-small);
   border-bottom: 2px solid var(--background-letters);
+  text-align: start;
 }
 
-.Hablities span {
+.Lenguajes {
+  margin-left: var(--space-xl);
+  width: fit-content;
+}
+
+.Lenguajes li:nth-child(1) {
+  color: var(--html-font-color);
+}
+.Lenguajes li:nth-child(2) {
+  color: var(--css-font-color);
+}
+.Lenguajes li:nth-child(3) {
+  color: var(--js-font-color);
+}
+.Lenguajes li:nth-child(4) {
+  color: var(--react-font-color);
+}
+
+.Contactos {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--space-long);
   align-items: center;
-  gap: 1rem;
 }
 
-.Icon {
-  font-size: var(--icons-size);
-  color: var(--background-icons);
+.Contactos li {
+  display: flex;
+  gap: var(--font-size-big);
 }
+
+/*/ ////////// Cards ///////////*/
 
 .Icons {
   display: flex;
   flex-wrap: wrap;
   gap: var(--font-size-big);
-  width: 100%;
-  max-width: 200px;
+  font-size: var(--font-size-big);
+  justify-content: start;
 }
 
-.HablitiesContainer .Hablities:nth-child(3) .Icons {
+/*/////////// Proyects ///////////*/
+
+.Proyect {
   width: 100%;
-  max-width: 200px;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-long);
+  text-decoration: none;
+  color: var(--background-letters);
+  padding: var(--font-size-small);
+  border-radius: var(--font-size-more-small-max);
+  border: 1px solid var(--background-letters);
+  transition: background-color 0.25s ease-in-out;
 }
 
-@media (max-width: 1220px) {
-  .Hablities {
+.Proyect svg {
+  border-radius: var(--font-size-big);
+}
+
+.Proyect:hover,
+.Proyect:hover svg {
+  background-color: var(--background-icons);
+  color: var(--background-componentes);
+  fill: var(--background-componentes);
+}
+
+/*/ ////////// Formacion Styles ///////////*/
+
+.Titleh4 {
+  text-align: start;
+  font-weight: 100;
+  margin-bottom: var(--font-size-more-small);
+  text-decoration: underline 1px;
+}
+
+@media (max-width: 1100px) {
+  .CardContainer,
+  .AboutMeContainer {
+    font-size: var(--font-size-medium);
+  }
+
+  .Titleh3 {
+    border-bottom: 1px solid var(--background-letters);
+  }
+}
+
+@media (max-width: 750px) {
+  .AboutMeContent,
+  .CardContainer,
+  .Titleh3,
+  .Titleh4,
+  .Icons p {
     font-size: var(--font-size-small);
   }
 
-  .Hablities h3 {
-    height: 49.39px;
-  }
-}
-
-@media (max-width: 970px) {
-  .Hablities h3 {
-    height: auto;
-    padding-bottom: 0.5em;
-  }
-}
-
-@media (max-width: 740px) {
-  .HablitiesContainer {
-    gap: 1rem;
-  }
-
-  .Hablities h3 {
-    font-size: var(--font-size-small);
-  }
-
-  .Hablities h3 {
-    height: auto;
-  }
-
+  .Contactos,
+  .Contactos li:nth-child(2),
   .Icons {
-    width: 100%;
-    gap: var(--space-short);
+    gap: var(--font-size-more-small-max);
   }
 
-  .Icon {
-    font-size: var(--icons-size-small);
+  .HablitiesContainer,
+  .CardsContainer {
+    gap: var(--font-size-small);
+  }
+
+  .Contactos {
+    padding: var(--font-size-more-small-max) 0rem
+      var(--font-size-more-small-max);
+  }
+
+  .Lenguajes {
+    margin-left: var(--font-size-small);
+  }
+
+  .AboutMeContent {
+    gap: var(--font-size-more-small-max);
+  }
+
+  .Titleh3 {
+    padding-bottom: var(--font-size-more-small-max);
+  }
+
+  .Proyect {
+    max-width: 200px;
+    padding: var(--font-size-more-small);
+  }
+}
+
+@media (max-width: 450px) {
+  .Titleh3,
+  .Titleh4,
+  .Icons p,
+  .AboutMeContent {
+    font-size: var(--font-size-more-small);
+  }
+
+  .Proyect {
+    padding: var(--font-size-more-small-max);
   }
 }

@@ -1,12 +1,17 @@
 import React from "react";
 
-export const HabilitiesCard = ({ Hablities, text, Icons, Content }) => {
+export const HabilitiesCard = ({
+  Hablities,
+  CardContainer,
+  TextStyle,
+  ContentContainer,
+  text,
+  Content,
+}) => {
   return (
-    <div className={Hablities}>
-      <div>
-        <h3>{text}</h3>
-      </div>
-      <div className={Icons}>{Content}</div>
+    <div className={CardContainer}>
+      <h3 className={TextStyle}>{text}</h3>
+      <div className={ContentContainer}>{Content}</div>
     </div>
   );
 };

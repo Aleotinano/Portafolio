@@ -9,7 +9,7 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
-  width: 100%;
+  max-width: 1200px;
 }
 
 #root {
@@ -18,10 +18,4 @@ body {
 
 body {
   background-color: var(--background-body);
-}
-
-@media (max-width: 100px) {
-  #root {
-    overflow-y: hidden;
-  }
 }

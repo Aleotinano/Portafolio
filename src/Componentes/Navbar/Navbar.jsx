@@ -4,26 +4,27 @@ import {
   MdKeyboardDoubleArrowLeft,
   MdOutlineWbSunny,
 } from "react-icons/md";
-import { FaFileDownload } from "react-icons/fa";
-
-import { AiOutlineHome } from "react-icons/ai";
+import { FaFileDownload, FaLinkedin } from "react-icons/fa";
+import { TbBrandFiverr } from "react-icons/tb";
 import { FaGithub, FaRegMoon } from "react-icons/fa";
-import { FaCode } from "react-icons/fa6";
 import { useTheme } from "./ThemeProvider";
+import { useTranslation } from "react-i18next";
 import "../../styles/variables.css";
-import Avatar from "../../assets/LJ LO-FI.jpeg";
 import navbarcss from "./navbarcss.module.css";
+import Cv from "../../assets/Curriculum Vitae Alejandro Otiñano.pdf";
+import i18n from "../Lenguajes/i18n";
+import Flag from "react-world-flags";
 
 export function Navbar() {
   const [isCollapsed, setIsCollapsed] = useState(true);
-
+  const [lang, setLang] = useState("es");
   const { theme, toggleChangueTheme } = useTheme();
+  const { t } = useTranslation();
 
-  const [Dowload, setDowload] = useState(0);
-
-  const toggleChangue = () => {
-    setDowload(Dowload);
-    console.log("Descargando CV " & Dowload.leght);
+  const handleLanguageChange = () => {
+    const newLang = lang === "es" ? "en" : "es";
+    setLang(newLang);
+    i18n.changeLanguage(newLang);
   };
 
   return (
@@ -36,56 +37,71 @@ export function Navbar() {
         <li
           className={navbarcss.item}
           onClick={() => setIsCollapsed(!isCollapsed)}
-          title={isCollapsed ? "Expand Sidebar" : "Collapse Sidebar"}
+          title={t("navHome")}
         >
           {isCollapsed ? (
             <MdKeyboardDoubleArrowRight className="icon" />
           ) : (
             <MdKeyboardDoubleArrowLeft className="icon" />
           )}
-          Portafolio
+          {t("navHome")}
         </li>
+        <a href="https://github.com/Aleotinano">
+          <li className={navbarcss.item} title="GitHub">
+            <FaGithub className="icon" />
+            GitHub
+          </li>
+        </a>
 
-        <li className={navbarcss.item} title="Home">
-          <AiOutlineHome className="icon" />
-          Home
-        </li>
+        <a href="https://www.linkedin.com/in/alejandro-otiñano-3882012ab">
+          <li className={navbarcss.item} title="Linkedin">
+            <FaLinkedin className="icon" />
+            Linkedin
+          </li>
+        </a>
 
-        <li className={navbarcss.item} title="Proyectos">
-          <FaCode className="icon" />
-          Proyectos
-        </li>
+        <a href="https://es.fiverr.com/aleotinano?public_mode=true">
+          <li className={navbarcss.item} title="Fiverr">
+            <TbBrandFiverr className="icon" />
+            Fiverr
+          </li>
+        </a>
 
-        <li className={navbarcss.item} title="GitHub">
-          <FaGithub className="icon" />
-          GitHub
-        </li>
-
-        <li className={navbarcss.item} title="About me">
-          <img src={Avatar} alt="Avatar" className="icon" />
-          About me
-        </li>
+        <a
+          href={Cv}
+          download={Cv}
+          className={navbarcss.item}
+          title={t("navDowloadCv")}
+        >
+          <FaFileDownload className="icon" />
+          {t("navDowloadCv")}
+        </a>
 
         <li
           className={navbarcss.item}
           onClick={toggleChangueTheme}
-          title="Theme"
+          title={t("navTheme")}
         >
           {!theme ? (
             <FaRegMoon className="icon" />
           ) : (
             <MdOutlineWbSunny className="icon" />
           )}
-          Theme
+          {t("navTheme")}
         </li>
 
         <li
           className={navbarcss.item}
-          onClick={toggleChangue}
-          title="Descargar Curriculum Vitae"
+          onClick={handleLanguageChange}
+          title={t("navLenguage")}
         >
-          <FaFileDownload className="icon" />
-          Descarga CV
+          {i18n.language === "es" ? (
+            <Flag code="ES" className="icon" />
+          ) : (
+            <Flag code="US" className="icon" />
+          )}
+
+          {t("navLenguage")}
         </li>
       </ul>
     </aside>

@@ -1,9 +1,8 @@
 import React from "react";
 import TypewriterEffect from "react-typewriter-effect";
 import homecss from "./homecss.module.css";
-import Avatar from "../../assets/LJ LO-FI.jpeg";
+import Avatar from "../../assets/profile-pic.png";
 import { Habilities } from "./Habilities/Habilities";
-import { AboutMe } from "./About me/AboutMe";
 
 export const Home = () => {
   return (
@@ -30,11 +29,7 @@ export const Home = () => {
         <img src={Avatar} alt="Avatar" className={homecss.Avatar} />
       </div>
 
-      <div className={homecss.HabilitiesAboutMeContainer}>
-        <AboutMe />
-
-        <Habilities />
-      </div>
+      <Habilities />
     </div>
   );
 };

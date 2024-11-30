@@ -22,12 +22,14 @@
   justify-content: start;
   cursor: pointer;
   text-wrap: nowrap;
-  margin: 0;
-  padding: 1.5rem;
+  padding: var(--font-size-big);
   gap: var(--font-size-more-small);
-  color: var(--background-letters);
   background-color: var(--background-componentes);
   border-radius: var(--font-size-small);
+}
+
+.AsideMenu a {
+  text-decoration: none;
 }
 
 .item {
@@ -37,13 +39,14 @@
   width: fit-content;
   justify-content: center;
   cursor: pointer;
-  gap: 2rem;
+  gap: var(--space-xl);
   padding: var(--font-size-small) 0;
+  color: var(--background-letters);
+  margin-left: 2px;
 }
 
 .item:hover {
-  scale: 1.08;
-  transition: 0.1s ease;
+  scale: 1.05;
 }
 
 .NavCollapsed {
@@ -57,18 +60,19 @@
 @media (max-width: 750px) {
   .NavContainer {
     font-size: 14px;
-    padding-left: 0.5rem;
-    height: calc(100% - 1rem);
+    padding-left: var(--font-size-more-small-max);
+    height: calc(100% - var(--font-size-small));
   }
 
   .AsideMenu {
-    padding: 0.7rem;
-    gap: 0.4rem;
+    padding: var(--font-size-more-small);
+    gap: var(--space-long);
   }
 
   .item {
-    gap: 0.5;
-    padding: 0.5em 0;
+    gap: var(--font-size-more-small-max);
+    padding: var(--font-size-more-small-max) 0;
+    margin-left: 0px;
   }
 
   .NavCollapsed {
@@ -76,6 +80,6 @@
   }
 
   .NavExpanded {
-    width: 50%;
+    width: 100%;
   }
 }
