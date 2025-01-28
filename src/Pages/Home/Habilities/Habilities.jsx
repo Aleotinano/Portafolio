@@ -165,7 +165,7 @@ export const Habilities = () => {
           CardContainer={Hablitiescss.CardContainer}
           TextStyle={Hablitiescss.Titleh3}
           ContentContainer={Hablitiescss.Icons}
-          text={t("tex56")}
+          text={t("tex5")}
           Content={[
             <a
               href="https://aleotinano.github.io/Tienda-de-zapatos"
@@ -176,7 +176,7 @@ export const Habilities = () => {
                 Huella
               </p>
               <FaGithub
-                className={`icon ${Hablitiescss.iconanimated} `}
+                className={`icon ${Hablitiescss.iconanimated}`}
                 key="github-huella"
               />
             </a>,
@@ -189,7 +189,7 @@ export const Habilities = () => {
                 {t("proyects1")}
               </p>
               <FaGithub
-                className={`icon ${Hablitiescss.iconanimated} `}
+                className={`icon ${Hablitiescss.iconanimated}`}
                 key="github-portfolio"
               />
             </a>,
