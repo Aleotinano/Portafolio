@@ -157,40 +157,17 @@ export const Habilities = () => {
                 key="github-portfolio"
               />
             </a>,
-          ]}
-        />
-        <HabilitiesCard
-          keytitle={"keytitle5"}
-          contentkey={"contentkey5"}
-          CardContainer={Hablitiescss.CardContainer}
-          TextStyle={Hablitiescss.Titleh3}
-          ContentContainer={Hablitiescss.Icons}
-          text={t("tex5")}
-          Content={[
             <a
               href="https://aleotinano.github.io/Tienda-de-zapatos"
-              key="project-1"
+              key="project-3"
               className={Hablitiescss.Proyect}
             >
-              <p key="project-p-1" className={Hablitiescss.textanimated}>
+              <p key="project-p-3" className={Hablitiescss.textanimated}>
                 Huella
               </p>
               <FaGithub
-                className={`icon ${Hablitiescss.iconanimated}`}
-                key="github-huella"
-              />
-            </a>,
-            <a
-              href="https://github.com/Aleotinano/Portfolio"
-              key="project-2"
-              className={Hablitiescss.Proyect}
-            >
-              <p key="project-p-2" className={Hablitiescss.textanimated}>
-                {t("proyects1")}
-              </p>
-              <FaGithub
-                className={`icon ${Hablitiescss.iconanimated}`}
-                key="github-portfolio"
+                className={`icon ${Hablitiescss.iconanimated} `}
+                key="github-Huella"
               />
             </a>,
           ]}
