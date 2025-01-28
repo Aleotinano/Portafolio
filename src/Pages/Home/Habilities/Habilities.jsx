@@ -1,7 +1,6 @@
 import React from "react";
 import Hablitiescss from "./Habilitiescss.module.css";
 import "../../../styles/variables.css";
-import { Link } from "react-router-dom";
 import {
   FaReact,
   FaHtml5,
@@ -32,8 +31,8 @@ export const Habilities = () => {
         contentkey={"contentkey1"}
         CardContainer={Hablitiescss.AboutMeContainer}
         TextStyle={Hablitiescss.Titleh3}
-        text={t("text1")}
         ContentContainer={Hablitiescss.AboutMeContent}
+        text={t("text1")}
         Content={[
           <p key="about-1">{t("aboutMe1")}</p>,
           <p key="about-2">{t("aboutMe2")}</p>,
@@ -58,13 +57,13 @@ export const Habilities = () => {
                   title="Instagram"
                 />
               </a>
-              <a href="https://www.linkedin.com/in/alejandro-otiñano-3882012ab">
+              <a href="https://www.linkedin.com/in/aleotinano">
                 <FaLinkedin className="icon" key="Linkedin" title="Linkedin" />
               </a>
               <a href="https://es.fiverr.com/aleotinano?public_mode=true">
                 <TbBrandFiverr className="icon" key="Fiverr" title="Fiverr" />
               </a>
-              <a href="mailto:alejandrootiano2@gmail.com">
+              <a href="mailto:alejandrootinano2@gmail.com">
                 <MdOutlineMailOutline
                   className="icon"
                   key="Gmail"
@@ -81,8 +80,8 @@ export const Habilities = () => {
           keytitle={"keytitle5"}
           contentkey={"contentkey5"}
           CardContainer={Hablitiescss.CardContainer}
-          ContentContainer={Hablitiescss.AboutMeContent}
           TextStyle={Hablitiescss.Titleh3}
+          ContentContainer={Hablitiescss.AboutMeContent}
           text={t("text2")}
           Content={[
             <h4 key="edu-1" className={Hablitiescss.Titleh4}>
@@ -96,8 +95,8 @@ export const Habilities = () => {
           contentkey={"contentkey2"}
           CardContainer={Hablitiescss.CardContainer}
           TextStyle={Hablitiescss.Titleh3}
-          text={t("text3")}
           ContentContainer={Hablitiescss.Icons}
+          text={t("text3")}
           Content={[
             <BiLogoAdobe className="icon" key="tool-1" />,
             <DiPhotoshop className="icon" key="tool-2" />,
@@ -113,8 +112,8 @@ export const Habilities = () => {
           contentkey={"contentkey3"}
           CardContainer={Hablitiescss.CardContainer}
           TextStyle={Hablitiescss.Titleh3}
-          text={t("text4")}
           ContentContainer={Hablitiescss.Icons}
+          text={t("text4")}
           Content={[
             <FaReact className="icon" key="tech-1" />,
             <FaHtml5 className="icon" key="tech-2" />,
@@ -129,11 +128,11 @@ export const Habilities = () => {
           contentkey={"contentkey4"}
           CardContainer={Hablitiescss.CardContainer}
           TextStyle={Hablitiescss.Titleh3}
-          text={t("text5")}
           ContentContainer={Hablitiescss.Icons}
+          text={t("text5")}
           Content={[
-            <Link
-              to="https://github.com/Aleotinano/DaFood-Frontend"
+            <a
+              href="https://github.com/Aleotinano/DaFood-Frontend"
               key="project-1"
               className={Hablitiescss.Proyect}
             >
@@ -144,9 +143,9 @@ export const Habilities = () => {
                 className={`icon ${Hablitiescss.iconanimated} `}
                 key="github-dafood"
               />
-            </Link>,
-            <Link
-              to="https://github.com/Aleotinano/Portfolio"
+            </a>,
+            <a
+              href="https://github.com/Aleotinano/Portfolio"
               key="project-2"
               className={Hablitiescss.Proyect}
             >
@@ -157,7 +156,43 @@ export const Habilities = () => {
                 className={`icon ${Hablitiescss.iconanimated} `}
                 key="github-portfolio"
               />
-            </Link>,
+            </a>,
+          ]}
+        />
+        <HabilitiesCard
+          keytitle={"keytitle5"}
+          contentkey={"contentkey5"}
+          CardContainer={Hablitiescss.CardContainer}
+          TextStyle={Hablitiescss.Titleh3}
+          ContentContainer={Hablitiescss.Icons}
+          text={t("tex56")}
+          Content={[
+            <a
+              href="https://aleotinano.github.io/Tienda-de-zapatos"
+              key="project-1"
+              className={Hablitiescss.Proyect}
+            >
+              <p key="project-p-1" className={Hablitiescss.textanimated}>
+                Huella
+              </p>
+              <FaGithub
+                className={`icon ${Hablitiescss.iconanimated} `}
+                key="github-huella"
+              />
+            </a>,
+            <a
+              href="https://github.com/Aleotinano/Portfolio"
+              key="project-2"
+              className={Hablitiescss.Proyect}
+            >
+              <p key="project-p-2" className={Hablitiescss.textanimated}>
+                {t("proyects1")}
+              </p>
+              <FaGithub
+                className={`icon ${Hablitiescss.iconanimated} `}
+                key="github-portfolio"
+              />
+            </a>,
           ]}
         />
       </div>

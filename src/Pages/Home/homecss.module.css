@@ -15,6 +15,7 @@
   gap: var(--font-size-small);
   color: var(--background-letters);
   font-size: var(--font-size-big);
+
   width: 100%;
   flex: 1;
 }
@@ -90,9 +91,12 @@
   }
 }
 
-@media (max-width: 330px) {
+@media (max-width: 300px) {
   .HomeTitles,
   .AvatarContainer {
     font-size: var(--space-short);
+  }
+  .HomeTitles {
+    font-size: var(--font-size-more-small-max);
   }
 }

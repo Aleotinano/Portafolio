@@ -4,6 +4,11 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   es: {
     translation: {
+      //titulo//
+
+      t1: "Hola Soy Alejandro",
+      t2: "Desarrollador Frontend",
+
       //About Me//
 
       aboutMe1: " ¡Hola! Soy Alejandro 👋",
@@ -29,7 +34,7 @@ const resources = {
       //Educacion//
 
       edu1: "Autodidacta",
-      edu2: "Mis conocimientos como programador los he adquirido de maneraautodidacta, a través de la práctica constante, el estudio independiente y la realización de proyectos personales, lo que me ha permitido dominar diversas tecnologías y herramientas.",
+      edu2: "Mis conocimientos como programador los he adquirido de manera autodidacta, a través de la práctica constante, el estudio independiente y la realización de proyectos personales, lo que me ha permitido dominar diversas tecnologías y herramientas.",
 
       //Cards//
 
@@ -50,6 +55,11 @@ const resources = {
   },
   en: {
     translation: {
+      //titulo//
+
+      t1: "Hello, I'm Alejandro",
+      t2: "Frontend Developer",
+
       //About Me//
 
       aboutMe1: " ¡Hello! I’m Alejandro 👋",
@@ -66,7 +76,7 @@ const resources = {
       aboutMe5:
         "👉 ¡If you're looking for support with your project or want to create a website, feel free to contact me.",
 
-      aboutme6: "Let’s talk!",
+      aboutMe6: "Let’s talk!",
 
       //Proyects//
 

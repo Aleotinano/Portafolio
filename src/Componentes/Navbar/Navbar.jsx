@@ -11,7 +11,8 @@ import { useTheme } from "./ThemeProvider";
 import { useTranslation } from "react-i18next";
 import "../../styles/variables.css";
 import navbarcss from "./navbarcss.module.css";
-import Cv from "../../assets/Curriculum Vitae Alejandro Otiñano.pdf";
+import Cves from "../../assets/CV-Alejandro-Otiñano-Español.pdf";
+import Cven from "../../assets/CV-Alejandro-Otiñano-English.pdf";
 import i18n from "../Lenguajes/i18n";
 import Flag from "react-world-flags";
 
@@ -53,7 +54,7 @@ export function Navbar() {
           </li>
         </a>
 
-        <a href="https://www.linkedin.com/in/alejandro-otiñano-3882012ab">
+        <a href="https://www.linkedin.com/in/aleotinano">
           <li className={navbarcss.item} title="Linkedin">
             <FaLinkedin className="icon" />
             Linkedin
@@ -61,15 +62,15 @@ export function Navbar() {
         </a>
 
         <a href="https://es.fiverr.com/aleotinano?public_mode=true">
-          <li className={navbarcss.item} title="Fiverr">
+          <li className={navbarcss.item} title="GitHub">
             <TbBrandFiverr className="icon" />
             Fiverr
           </li>
         </a>
 
         <a
-          href={Cv}
-          download={Cv}
+          href={lang === "es" ? Cves : Cven}
+          download={lang === "es" ? Cves : Cven}
           className={navbarcss.item}
           title={t("navDowloadCv")}
         >
@@ -95,7 +96,7 @@ export function Navbar() {
           onClick={handleLanguageChange}
           title={t("navLenguage")}
         >
-          {i18n.language === "es" ? (
+          {lang === "es" ? (
             <Flag code="ES" className="icon" />
           ) : (
             <Flag code="US" className="icon" />

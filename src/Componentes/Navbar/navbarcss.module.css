@@ -70,7 +70,6 @@
   }
 
   .item {
-    gap: var(--font-size-more-small-max);
     padding: var(--font-size-more-small-max) 0;
     margin-left: 0px;
   }
