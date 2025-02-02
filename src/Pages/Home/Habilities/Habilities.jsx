@@ -158,7 +158,7 @@ export const Habilities = () => {
               />
             </a>,
             <a
-              href="https://aleotinano.github.io/Tienda-de-zapatos"
+              href="https://aleotinano.github.io/Huella"
               key="project-3"
               className={Hablitiescss.Proyect}
             >
